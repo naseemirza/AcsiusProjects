@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    tools:context="acsiustech.wolaapp.RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/scrolview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/re"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linbtns"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/loginbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:text="LOGIN"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/regbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlack"
+                    android:text="REGISTER"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+    <TextView
+        android:id="@+id/newcsttxt"
+        android:layout_below="@+id/linbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Customer"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"/>
+
+    <LinearLayout
+        android:id="@+id/textlines"
+        android:orientation="vertical"
+        android:layout_below="@+id/newcsttxt"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:textAlignment="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="now to make your shopping"
+            android:textAlignment="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="quicker and easier"
+            android:textAlignment="center"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/editTextNm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textlines"
+                android:layout_marginTop="50dp"
+                android:textSize="13sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textCursorDrawable="@color/darkgray"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:ems="10"
+                android:paddingStart="10dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editTextem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextNm"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:textCursorDrawable="@color/darkgray"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="13sp"
+                android:hint="Email"
+                android:inputType="textPersonName" />
+
+
+
+            <EditText
+                android:id="@+id/editTextphn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextem"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:textCursorDrawable="@color/darkgray"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="13sp"
+                android:hint="Phone Number"
+                android:inputType="number" />
+
+
+
+            <EditText
+                android:id="@+id/editTextpas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextphn"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:textCursorDrawable="@color/darkgray"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="13sp"
+                android:hint="Password(5 or more characters)*"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editTextps1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextpas"
+                android:textCursorDrawable="@color/darkgray"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:textSize="13sp"
+                android:hint="Confirm Password(5 or more characters)*"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/buttonS"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/editTextps1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorBlack"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
