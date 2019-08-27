@@ -168,9 +168,13 @@ public class DetailPageActivity extends AppCompatActivity {
         display(minteger);
 
     }
+
     public void decreaseInteger(View view) {
-        minteger = minteger - 1;
-        display(minteger);
+        if (minteger>1){
+            minteger = minteger - 1;
+            display(minteger);
+        }
+
     }
 
     private void display(int number) {
