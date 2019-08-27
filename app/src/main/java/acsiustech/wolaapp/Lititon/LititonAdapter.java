@@ -1,4 +1,4 @@
-package acsiustech.wolaapp;
+package acsiustech.wolaapp.Lititon;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,37 +11,43 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import acsiustech.wolaapp.R;
+import acsiustech.wolaapp.RecyclerViewItemClickListener;
+
 /**
- * Created by SAI on 09-07-2019.
+ * Created by SAI on 17-07-2019.
  */
 
-public class NewCollcAdapter extends RecyclerView.Adapter<NewCollcAdapter.ProductViewHolder> {
+public class LititonAdapter extends RecyclerView.Adapter<LititonAdapter.ProductViewHolder> {
 
     private Context mCtx;
-    private List<NewCollcModel> productList;
+    private List<LititonModel> productList;
 
-    public NewCollcAdapter(Context mCtx, List<NewCollcModel> productList) {
+    public LititonAdapter(Context mCtx, List<LititonModel> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }
 
     @Override
-    public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        //inflating and returning our view holder
+    public LititonAdapter.ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.collectionlayout, null);
-        return new ProductViewHolder(view);
+        View view = inflater.inflate(R.layout.litionlayout, null);
+        return new LititonAdapter.ProductViewHolder(view);
+
     }
 
     @Override
-    public void onBindViewHolder(ProductViewHolder holder, int position) {
-        //getting the product of the specified position
-        NewCollcModel product = productList.get(position);
+    public void onBindViewHolder(LititonAdapter.ProductViewHolder holder, int position) {
 
-        //binding the data with the viewholder views
-        holder.textViewName.setText(product.getName());
+        //getting the product of the specified position
+        LititonModel product = productList.get(position);
+
         holder.textViewCurrncy.setText(product.getCurrency());
         holder.textViewPrice.setText(product.getPrice());
+        holder.textViewName.setText("Kyodo Swing Chair "+"\n"+" with stand"); //product.getName()
+        holder.textViewofftxt.setText(product.getOfftxt());
+       // holder.textsold.setText(product.getSoldItems());
+       // holder.textordrd.setText(product.getOrdrdItems());
 
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
@@ -49,7 +55,7 @@ public class NewCollcAdapter extends RecyclerView.Adapter<NewCollcAdapter.Produc
             @Override
             public void onClick(View view, int position) {
 
-                Intent intent = new Intent(view.getContext(), DetailPageActivity.class);
+                Intent intent = new Intent(view.getContext(), LititonDetailActivity.class);
                 view.getContext().startActivity(intent);
 
             }
@@ -57,16 +63,14 @@ public class NewCollcAdapter extends RecyclerView.Adapter<NewCollcAdapter.Produc
 
     }
 
-
     @Override
     public int getItemCount() {
         return productList.size();
     }
 
-
     class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView textViewName, textViewCurrncy,textViewPrice;
+        TextView textViewName,textViewofftxt,textsold,textordrd, textViewCurrncy,textViewPrice;
         ImageView imageView;
 
         private RecyclerViewItemClickListener itemClickListener;
@@ -74,9 +78,13 @@ public class NewCollcAdapter extends RecyclerView.Adapter<NewCollcAdapter.Produc
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-            textViewName = itemView.findViewById(R.id.nameTextview);
-            textViewCurrncy = itemView.findViewById(R.id.crncytype);
-            textViewPrice = itemView.findViewById(R.id.pricetext1);
+
+            textViewCurrncy = itemView.findViewById(R.id.ftcdsgn);
+            textViewPrice = itemView.findViewById(R.id.vwall);
+            textViewName = itemView.findViewById(R.id.txtname);
+            textViewofftxt = itemView.findViewById(R.id.txtoff);
+           // textsold = itemView.findViewById(R.id.txtsold);
+           // textordrd = itemView.findViewById(R.id.txtordered);
             imageView = itemView.findViewById(R.id.imageview);
 
             itemView.setOnClickListener(this);

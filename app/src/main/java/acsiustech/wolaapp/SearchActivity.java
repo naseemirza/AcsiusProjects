@@ -27,6 +27,7 @@ public class SearchActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
         editTextSearch=(AutoCompleteTextView)findViewById(R.id.autoCompleteTextView1);
 
         imageview = (ImageView)findViewById(R.id.imageView1);

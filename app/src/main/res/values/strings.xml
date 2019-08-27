@@ -92,5 +92,10 @@
 
     <string name="forgpasstext">No worries! We will help you reset your password easily.
         Please let us know your email address and we will send your password.</string>
+    <string name="descrp">Description description description description description description description description. \n\n
+    description description description description.\n\n
+    description description description description description description description description description.</string>
+
+    <string name="descrp1">Description description description description description description description description.</string>
 
 </resources>

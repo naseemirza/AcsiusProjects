@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="acsiustech.wolaapp.CartItemActivity">
+    tools:context="acsiustech.wolaapp.Cart.CartActivity">
 
 
-    <include
-        android:id="@+id/footr"
-        layout="@layout/footerbar" />
+    <!--<include-->
+        <!--android:id="@+id/footr"-->
+        <!--layout="@layout/footerbar" />-->
 
 </RelativeLayout>

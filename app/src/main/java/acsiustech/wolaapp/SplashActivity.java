@@ -51,8 +51,6 @@ public class SplashActivity extends AppCompatActivity {
                     Intent intent = new Intent(SplashActivity.this,
                             MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-
-
                     startActivity(intent);
                     SplashActivity.this.finish();
                 } catch (InterruptedException e) {
@@ -60,7 +58,6 @@ public class SplashActivity extends AppCompatActivity {
                 } finally {
                     SplashActivity.this.finish();
                 }
-
             }
         };
         splashTread.start();

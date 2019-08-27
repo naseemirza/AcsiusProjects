@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="acsiustech.wolaapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/wola_logo"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
+        android:label=""
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".MainActivity"
@@ -33,7 +42,7 @@
             android:name=".RegisterActivity"
             android:parentActivityName=".LoginActivity" />
         <activity
-            android:name=".LitionActivity"
+            android:name=".Lititon.LitionActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".WallowinaActivity"
@@ -46,13 +55,49 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".WishlistActivity"
+            android:name=".WishList.WishlistActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".CartItemActivity"
+            android:name=".DetailPageActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".DetailPageActivity"
+        <activity
+            android:name=".Categories.CategoryActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Categories.ChildActivity"
+            android:parentActivityName=".Categories.CategoryActivity" />
+        <activity
+            android:name=".Lititon.LititonDetailActivity"
+            android:parentActivityName=".Lititon.LitionActivity" />
+        <activity
+            android:name=".Lititon.ViewAllLititonActivity"
+            android:parentActivityName=".Lititon.LitionActivity" />
+        <activity
+            android:name=".NewCollection.NewCollcetionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Lititon.FilterPkg.FilterActivity"
+            android:parentActivityName=".Lititon.ViewAllLititonActivity" />
+        <activity
+            android:name=".Cart.CartActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Payment.PaymentActivity"
+            android:parentActivityName=".Cart.CartActivity" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".History.HistoryActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".HomePageLink.Shopnow1Activity"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HomePageLink.ShopnowActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
