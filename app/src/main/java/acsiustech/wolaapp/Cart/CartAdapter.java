@@ -39,17 +39,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
     public void onBindViewHolder(final CartAdapter.ViewHolder holder, int position) {
         final CartModel app=mApps.get(position);
 
-
         // String imageUrl = app.getImageUrl();
         String productName = app.getPName();
         String totalPrice = app.getPPrice();
         String totalCurncy = app.getPcurrn();
 
-
         holder.mTextViewName.setText(productName);
         holder.mTextViewCurncy.setText(totalCurncy);
         holder.mTextViewPrice.setText(totalPrice);
-
 
 //        Glide.with(mContext)
 //                .load(imageUrl)
@@ -69,7 +66,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
                 final EditText qunty = dialog.findViewById(R.id.et);
                 holder.textViewQty.setText(qunty.getText().toString());
 
-
                 Button btnok = (Button) dialog.findViewById(R.id.btnok);
                 btnok.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -77,6 +73,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
 
                        // long result =  ((CheckOutActivity)mCtx).AddMethod(cartID, Integer.parseInt(qunty.getText().toString()));
                        // if (result == 1) {
+                        if (qunty.getText().toString().length() == 0) {
+                            qunty.setError("Please enter quantity");
+                            qunty.requestFocus();
+                            return;
+                        }
                             holder.textViewQty.setText(qunty.getText().toString());
                             dialog.dismiss();
 
@@ -88,6 +89,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
                 btncn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        holder.textViewQty.setText("1");
                         dialog.dismiss();
                     }
                 });

@@ -14,36 +14,36 @@
     <LinearLayout
         android:id="@+id/cardview1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textcolor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:gravity="start|center"
             android:text="Price"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/colorBlack"
-                android:text="Min."/>
+                android:text="Min."
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/editqnty"
@@ -61,27 +61,27 @@
                 android:textCursorDrawable="@color/darkgray"
                 android:textSize="12sp" />
 
-        <ImageButton
-            android:id="@+id/add"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
-                android:textColor="@color/colorBlack"
-                android:text="To"/>
+                android:text="To"
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/colorBlack"
-                android:text="Max."/>
+                android:text="Max."
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/editqnty1"
@@ -106,95 +106,86 @@
                 android:src="@drawable/ic_arrow_drop_down_black_24dp" />
         </LinearLayout>
 
-        <!--<Spinner-->
-            <!--android:id="@+id/subtextcolor"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginStart="30dp"-->
-            <!--android:layout_marginEnd="30dp"-->
-            <!--android:layout_marginTop="15dp" />-->
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:gravity="start|center"
             android:text="Category"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/categrytext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:gravity="start|center"
             android:text="Brand"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/brandtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:gravity="start|center"
             android:text="Offers"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/offerstext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:gravity="start|center"
             android:text="Discount"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/discounttext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginBottom="30dp" />
 
     </LinearLayout>
 
@@ -202,7 +193,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/cardview1"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -212,9 +203,7 @@
         <Button
             android:id="@+id/buttonok"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cardview1"
-            android:layout_centerHorizontal="true"
+            android:layout_height="35dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
@@ -228,8 +217,7 @@
         <Button
             android:id="@+id/buttoncncle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_height="35dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
@@ -241,6 +229,8 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+
     <!--<android.support.v7.widget.RecyclerView-->
         <!--android:id="@+id/recyclerView"-->
         <!--android:layout_width="match_parent"-->

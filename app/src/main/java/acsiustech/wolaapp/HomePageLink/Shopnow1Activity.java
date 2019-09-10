@@ -33,7 +33,6 @@ public class Shopnow1Activity extends AppCompatActivity {
         upArrow.setColorFilter(getResources().getColor(R.color.colorBlack), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
-
         mywebview = (WebView) findViewById(R.id.webView1);
         mywebview.setWebViewClient(new MyWebViewClient());
         String url="http://1seoindia.com/wola/?post_type=product#038;p=124";

@@ -75,18 +75,18 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/newcolc"
-        android:layout_below="@+id/hmimg"
-        android:gravity="center_vertical"
-        android:padding="20dp"
-        android:textAlignment="center"
-        android:text="New Collections >"
-        android:background="@color/maincolor"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/newcolc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hmimg"
+                android:background="@color/maincolor"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:text="New Collections >"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

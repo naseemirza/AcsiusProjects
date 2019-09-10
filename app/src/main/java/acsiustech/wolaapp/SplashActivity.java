@@ -60,6 +60,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         };
+
         splashTread.start();
 
     }

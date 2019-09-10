@@ -35,8 +35,6 @@ public class FilterActivity extends AppCompatActivity {
 //    private CustomAdapter listAdapter;
 //    private ExpandableListView simpleExpandableListView;
 
-
-
 //    List<ParcatModel> productListL;
 //    RecyclerView recyclerViewL;
 //
@@ -76,7 +74,6 @@ public class FilterActivity extends AppCompatActivity {
                 final EditText qunty = dialog.findViewById(R.id.et);
                 textViewmin.setText(qunty.getText().toString());
 
-
                 Button btnok = (Button) dialog.findViewById(R.id.btnok);
                 btnok.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -84,6 +81,12 @@ public class FilterActivity extends AppCompatActivity {
 
                         // long result =  ((CheckOutActivity)mCtx).AddMethod(cartID, Integer.parseInt(qunty.getText().toString()));
                         // if (result == 1) {
+
+                        if (qunty.getText().toString().length() == 0) {
+                            qunty.setError("Please enter min price");
+                            qunty.requestFocus();
+                            return;
+                        }
                         textViewmin.setText(qunty.getText().toString());
                         dialog.dismiss();
 
@@ -123,6 +126,12 @@ public class FilterActivity extends AppCompatActivity {
 
                         // long result =  ((CheckOutActivity)mCtx).AddMethod(cartID, Integer.parseInt(qunty.getText().toString()));
                         // if (result == 1) {
+
+                        if (qunty.getText().toString().length() == 0) {
+                            qunty.setError("Please enter max price");
+                            qunty.requestFocus();
+                            return;
+                        }
                         textViewmax.setText(qunty.getText().toString());
                         dialog.dismiss();
 

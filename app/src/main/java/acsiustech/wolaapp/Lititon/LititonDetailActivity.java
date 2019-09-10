@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -36,6 +37,8 @@ public class LititonDetailActivity extends AppCompatActivity {
     CardView desccard;
     ImageView downare,uparw;
     int minteger=1;
+    ImageButton fav,fav1, share;
+    boolean isFav=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,10 @@ public class LititonDetailActivity extends AppCompatActivity {
 
         addtocart=(Button)findViewById(R.id.Addtocart);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+
+        fav=(ImageButton)findViewById(R.id.imgfav);
+        fav1=(ImageButton)findViewById(R.id.imgfav1);
+        share=(ImageButton)findViewById(R.id.imgshare);
 
 //        litiontxt=(TextView)findViewById(R.id.textViewDesc);
 //        downare=(ImageView)findViewById(R.id.arrow1);
@@ -107,11 +114,23 @@ public class LititonDetailActivity extends AppCompatActivity {
         productList.add(new LititonModel("$","140.02",R.drawable.lounge_chair,"Kyodo Swing Chair with stand",
                 "50% off"));
 
-
         LititonAdapter adapter = new LititonAdapter(this, productList);
         recyclerView.setAdapter(adapter);
 
+        fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                if (!isFav){
+                    v.setBackgroundResource(R.drawable.ic_favorite_black_24dp);
+                    isFav=true;
+                }
+                else {
+                    v.setBackgroundResource(R.drawable.ic_favorite_border_black_24dp);
+                    isFav=false;
+                }
+            }
+        });
 
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,7 +148,6 @@ public class LititonDetailActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void increaseInteger(View view) {
@@ -137,9 +155,12 @@ public class LititonDetailActivity extends AppCompatActivity {
         display(minteger);
 
     }
+
     public void decreaseInteger(View view) {
-        minteger = minteger - 1;
-        display(minteger);
+        if (minteger>1){
+            minteger = minteger - 1;
+            display(minteger);
+        }
     }
 
     private void display(int number) {

@@ -63,7 +63,6 @@ public class DetailPageActivity extends AppCompatActivity {
         fav1=(ImageButton)findViewById(R.id.imgfav1);
         share=(ImageButton)findViewById(R.id.imgshare);
 
-
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setHasFixedSize(true);
@@ -176,7 +175,6 @@ public class DetailPageActivity extends AppCompatActivity {
         }
 
     }
-
     private void display(int number) {
         TextView displayInteger = (TextView) findViewById(R.id.editqnty);
         displayInteger.setText("" + number);

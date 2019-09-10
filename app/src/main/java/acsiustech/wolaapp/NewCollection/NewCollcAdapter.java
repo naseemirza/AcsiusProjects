@@ -64,7 +64,6 @@ public class NewCollcAdapter extends RecyclerView.Adapter<NewCollcAdapter.Produc
 
     }
 
-
     @Override
     public int getItemCount() {
         return productList.size();

@@ -36,7 +36,6 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
         return new WishListAdapter.ViewHolder(v);
     }
 
-
     @Override
     public void onBindViewHolder(final WishListAdapter.ViewHolder holder, int position) {
         final WishListModel app=mApps.get(position);
@@ -46,7 +45,6 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
         String productName = app.getPName();
         String totalPrice = app.getPPrice();
         String totalCurncy = app.getPcurrn();
-
 
         holder.mTextViewName.setText(productName);
         holder.mTextViewCurncy.setText(totalCurncy);
@@ -71,7 +69,6 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
                 final EditText qunty = dialog.findViewById(R.id.et);
                 holder.textViewQty.setText(qunty.getText().toString());
 
-
                 Button btnok = (Button) dialog.findViewById(R.id.btnok);
                 btnok.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -79,6 +76,12 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
 
                         // long result =  ((CheckOutActivity)mCtx).AddMethod(cartID, Integer.parseInt(qunty.getText().toString()));
                         // if (result == 1) {
+
+                        if (qunty.getText().toString().length() == 0) {
+                            qunty.setError("Please enter quantity");
+                            qunty.requestFocus();
+                            return;
+                        }
                         holder.textViewQty.setText(qunty.getText().toString());
                         dialog.dismiss();
 
@@ -90,6 +93,7 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
                 btncn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        holder.textViewQty.setText("1");
                         dialog.dismiss();
                     }
                 });
@@ -97,8 +101,6 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
                 dialog.show();
             }
         });
-
-
     }
 
     @Override
@@ -115,12 +117,11 @@ public class WishListAdapter  extends RecyclerView.Adapter<WishListAdapter.ViewH
     //implements View.OnClickListener
     public class ViewHolder extends RecyclerView.ViewHolder  {
 
-        public ImageView mImageView;
-        public TextView mTextViewName;
-        public TextView mTextViewCurncy, textViewQty;
-        public TextView mTextViewPrice;
+        private ImageView mImageView;
+        private TextView mTextViewName;
+        private TextView mTextViewCurncy, textViewQty;
+        private TextView mTextViewPrice;
         ImageButton add;
-
 
         //private RecyclerViewItemClickListener itemClickListener;
 

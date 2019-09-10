@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,67 +38,87 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RegisterActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".Lititon.LitionActivity"
-            android:parentActivityName=".MainActivity" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Categories.ChildActivity" />
         <activity
             android:name=".WallowinaActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ForgotPassActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".SearchActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".WishList.WishlistActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".DetailPageActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Categories.CategoryActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Categories.ChildActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Categories.CategoryActivity" />
         <activity
             android:name=".Lititon.LititonDetailActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Lititon.LitionActivity" />
         <activity
             android:name=".Lititon.ViewAllLititonActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Lititon.LitionActivity" />
         <activity
             android:name=".NewCollection.NewCollcetionActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Lititon.FilterPkg.FilterActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Lititon.ViewAllLititonActivity" />
         <activity
             android:name=".Cart.CartActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutUsActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Payment.PaymentActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Cart.CartActivity" />
         <activity
             android:name=".ContactUsActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".History.HistoryActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
 
         <activity android:name=".HomePageLink.Shopnow1Activity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".HomePageLink.ShopnowActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
